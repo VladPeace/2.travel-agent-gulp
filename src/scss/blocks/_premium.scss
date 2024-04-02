@@ -1,0 +1,124 @@
+.premium {
+  padding: var(--padding-width); // 60px - 20px
+  text-wrap: pretty;
+
+  // .premium__content
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.875rem, -4.554rem + 13.39vw, 7.5rem); // 120px - 30px
+
+    @include medium {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .premium__row
+  &__row {
+    display: grid;
+    gap: 32px;
+  }
+
+  // .premium__title
+  &__title {
+    display: grid;
+    gap: 24px;
+  }
+
+  // .premium__content-grid
+  &__content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    // row-gap: 32px;
+
+    @include medium {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include medium {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .premium__cell
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 32px;
+
+    background-position: 0 0; /* x y */
+    background-size: auto;
+    background-repeat: no-repeat;
+    &--one {
+      background-image: url('./../../img/premium/1.svg');
+    }
+    &--two {
+      background-image: url('./../../img/premium/2.svg');
+    }
+    &--three {
+      background-image: url('./../../img/premium/3.svg');
+    }
+  }
+
+  // .premium__cell-title
+  &__cell-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+  }
+
+  // .premium__cell-text
+  &__cell-text {
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text-muted);
+  }
+
+  // .premium__picture
+  &__picture {
+    position: relative;
+
+    @include medium {
+      display: inline-grid;
+      // margin: 0 auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  // .premium__picture-hint
+  &__picture-hint {
+    position: absolute;
+    top: clamp(1.25rem, -0.107rem + 6.79vw, 6rem); // 96px - 30px
+    left: -58px;
+
+    @include medium {
+      display: none;
+    }
+  }
+
+  // .premium__picture-grid
+  &__picture-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: clamp(0.875rem, 0.458rem + 1.16vw, 1.5rem); // 24px - 14px
+
+    picture:first-child {
+      grid-column: 1 / span 2;
+    }
+
+    img {
+      border-radius: 16px;
+    }
+
+    @include small {
+      display: none;
+    }
+  }
+}

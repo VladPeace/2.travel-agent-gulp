@@ -1,0 +1,28 @@
+.partners {
+  padding: var(--padding-width); // 60px - 20px
+
+  // .partners__row
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+
+		@include extraLarge {
+			flex-direction: column;
+		}
+  }
+
+  // .partners__title
+  &__title {
+  }
+
+  // .partners__list
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 0.714rem + 1.43vw, 2rem); // 32px - 16px
+  }
+}

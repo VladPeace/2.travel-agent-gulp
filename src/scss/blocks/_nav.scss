@@ -1,0 +1,53 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 150%;
+
+  // .nav__logo
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  // .nav__list
+  &__list {
+    display: flex;
+    column-gap: 24px;
+
+    @include medium {
+      display: none;
+    }
+
+    a {
+      color: var(--text-color);
+    }
+    a:hover,
+    a.active {
+      color: var(--accent);
+      transition: all 0.2s ease-in;
+    }
+  }
+
+  // .nav__btns
+  &__btns {
+    @include medium {
+      display: none;
+    }
+
+    display: flex;
+    gap: 12px;
+  }
+
+  // .nav__icon
+  &__icon {
+    display: none;
+
+    @include medium {
+      display: block;
+    }
+  }
+}

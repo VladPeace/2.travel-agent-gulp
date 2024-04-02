@@ -1,0 +1,23 @@
+.btn-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+
+  padding: 8px 20px;
+  height: 40px;
+
+  border: 1px solid #b7b7b7;
+  border-radius: 8px;
+
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--login-btn-color);
+
+  transition: opacity 0.2s ease-in;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+  opacity: 0.8;
+}

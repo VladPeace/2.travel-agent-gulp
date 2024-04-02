@@ -1,0 +1,59 @@
+.card {
+  max-width: 345px;
+
+  // .card__img
+  &__img {
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 16px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // .card__title-wrapper
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 4px;
+  }
+
+  // .card__title
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  // .card__rating
+  &__rating {
+    display: flex;
+    gap: 4px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+
+    &::before {
+      display: block;
+      content: '';
+
+      // position: absolute;
+      // left: 0px;
+      // top: 0px;
+      width: 17px;
+      height: 17px;
+
+      background-image: url('./../../img/icons/star-small.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  // .card__price
+  &__price {
+    font-weight: 500;
+  }
+}
